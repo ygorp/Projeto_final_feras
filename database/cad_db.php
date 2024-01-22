@@ -1,0 +1,28 @@
+<?php
+// Conexão com o banco de dados
+$servername = "localhost";
+$username = "root";
+$password = "72921804";
+$dbname = "sistema_cadastro";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Erro na conexão com o banco de dados: " . $conn->connect_error);
+}
+
+// Recebe os dados do formulário
+$email = $_POST['email'];
+$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+
+// Insere os dados no banco de dados
+$sql = "INSERT INTO usuarios (email, senha) VALUES ('$email', '$senha')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Cadastro realizado com sucesso!";
+} else {
+    echo "Erro ao cadastrar: " . $conn->error;
+}
+
+$conn->close();
+?>

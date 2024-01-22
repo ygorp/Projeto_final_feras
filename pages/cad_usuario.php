@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Feras Tecnologia</title>
+    <title>Document</title>
 
     <link rel="stylesheet" href="/css/login.css">
 
 </head>
 <body>
-    <main>
+<main>
         <div class="container">
             <div class="login">
                 <div class="login__logo">
@@ -17,21 +17,18 @@
                 </div>
                 
                 <div class="login__form">
-                    <form action="/login" method="POST">
-                    <p>Bem-vindo</p>
+                    <form action="/database/cad_db.php" method="POST">
+                    <p>Cadastre-se aqui!</p>
                         <div class="login__form__group">
                             <label for="email">E-mail</label>
                             <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
                         </div>
                         <div class="login__form__group">
                             <label for="password">Senha</label>
-                            <input type="password" name="password" id="password" placeholder="Digite sua senha">
-                        </div>
-                        <div class="cad">
-                        <a href="" class="login_cad">Cadastre-se</a>
+                            <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
                         </div>
                         <div class="login__form__group">
-                            <button type="submit">Entrar</button>
+                            <button type="submit">Cadastrar</button>
                         </div>
                     </form>
                 </div>
