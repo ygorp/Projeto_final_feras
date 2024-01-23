@@ -5,7 +5,7 @@ $username = "root";
 $password = "72921804";
 $dbname = "sistema_cadastro";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Erro na conexão com o banco de dados: " . $conn->connect_error);
@@ -19,7 +19,7 @@ $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 $sql = "INSERT INTO usuarios (email, senha) VALUES ('$email', '$senha')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Cadastro realizado com sucesso!";
+    header("Location: index.php");
 } else {
     echo "Erro ao cadastrar: " . $conn->error;
 }
