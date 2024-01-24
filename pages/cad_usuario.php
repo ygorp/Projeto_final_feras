@@ -17,7 +17,7 @@
                 </div>
                 
                 <div class="login__form">
-                    <form action="/database/cad_db.php" method="POST">
+                    <form action="/database/processar_cadastro.php" method="POST">
                     <p>Cadastre-se aqui!</p>
                         <div class="login__form__group">
                             <label for="email">E-mail</label>
