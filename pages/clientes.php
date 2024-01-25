@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario_email'])) {
+    header("Location: clientes.html");
+    exit();
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,8 +28,10 @@
         </div>
 
         <div class="usuario">
-            <p>Ygor pacheco</p>
+            <?php echo $_SESSION['usuario_email'];?>
             <img src="/img/logo.png" alt="">
+
+            <a href="../database/processar_logout.php">Sair</a>
         </div>
     </header>
 

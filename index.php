@@ -17,7 +17,7 @@
                 </div>
                 
                 <div class="login__form">
-                    <form action="/database/login_db.php" method="POST">
+                    <form action="/database/processar_login.php" method="POST">
                     <p>Bem-vindo</p>
                         <div class="login__form__group">
                             <label for="email">E-mail</label>
@@ -25,7 +25,7 @@
                         </div>
                         <div class="login__form__group">
                             <label for="password">Senha</label>
-                            <input type="password" name="password" id="password" placeholder="Digite sua senha">
+                            <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
                         </div>
                         <div class="cad">
                         <a href="/pages/cad_usuario.php" class="login_cad">Cadastre-se</a>
