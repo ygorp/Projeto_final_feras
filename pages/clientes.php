@@ -7,6 +7,8 @@ if (!isset($_SESSION['usuario_email'])) {
 }
 
 
+include("../database/db.php");
+
 ?>
 
 
@@ -43,8 +45,33 @@ if (!isset($_SESSION['usuario_email'])) {
         <div class="cliente_list">
             <div class="titulo_btn">
                 <h1>Clientes</h1>
-                <button><i class="fa-solid fa-square-plus"></i></button>
+                <a href="/pages/cad_clientes.php"><i class="fa-solid fa-square-plus"></i></a>
             </div>
+
+            <table>
+                <tr>
+                    <td>Nome Completo</td>
+                    <td>CPF</td>
+                    <td>Celular</td>
+                    <td>Email</td>
+                    <td>Status</td>
+                    <td>Ação</td>
+                </tr>
+
+                <?php
+                    // Exibe os usuários na tabela
+                    while ($row = $resultado->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>{$row['nome']}</td>";
+                        echo "<td>{$row['cpf']}</td>";
+                        echo "<td>{$row['celular']}</td>";
+                        echo "<td>{$row['email']}</td>";
+                        echo "<td>{$row['status']}</td>";
+                        echo "<td><button onclick=\"realizarAcao({$row['id']})\">Realizar Ação</button></td>";
+                        echo "</tr>";
+                    }
+                ?>
+            </table>
         </div>
     </main>
 </body>
