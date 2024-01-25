@@ -57,33 +57,51 @@ if (!isset($_SESSION['usuario_email'])) {
                         <form action="/database/processar_cadastro_cliente.php" method="post">
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                                    <label for="nome">Nome completo</label>
+                                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Ygor Pacheco" aria-label="First name">
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                                    <label for="nascimento">Data de nascimento</label>
+                                    <input type="text" id="nascimento" name="nascimento" class="form-control" placeholder="07/02/1992" aria-label="Last name">
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                                    <label for="genero" class="form-label">Gênero</label>
+                                    <select id="genero" name="genero" class="form-select">
+                                    <option selected>Selecione</option>
+                                    <option value="feminino">Feminino</option>
+                                    <option value="masculino">Masculino</option>
+                                    </select>
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                                    <label for="cpf">CPF</label>
+                                    <input type="text" id="cpf" name="cpf" class="form-control" placeholder="133.018.543-45" aria-label="Last name">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                                    <label for="celular">Celular</label>
+                                    <input type="text" id="celular" name="celular" class="form-control" placeholder="(27) 9 9999-889" aria-label="First name">
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                                    <label for="email">E-mail</label>
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="ygor@email.com.br" aria-label="Last name">
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                                    <label for="senha">Senha</label>
+                                    <input type="password" id="senha" name="senha" class="form-control" placeholder="************" aria-label="Last name">
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                                <label for="status" class="form-label">Status</label>
+                                    <select id="status" name="status" class="form-select">
+                                    <option selected>Selecione</option>
+                                    <option value="ativo">Ativo</option>
+                                    <option value="inativo">Inativo</option>
+                                    </select>
                                 </div>
                             </div>
+
+                            <input type="submit" value="Salvar">
                         </form>
                     </div>
                 </div>
