@@ -48,7 +48,7 @@ include("../database/db.php");
                 <a href="/pages/cad_clientes.php"><i class="fa-solid fa-square-plus"></i></a>
             </div>
 
-            <table>
+            <table class="estilo-tabela">
                 <tr>
                     <td>Nome Completo</td>
                     <td>CPF</td>
@@ -60,6 +60,9 @@ include("../database/db.php");
 
                 <?php
                     // Exibe os usuários na tabela
+                    include("../database/conn.php");
+                    $sql = "SELECT * FROM clientes";
+                    $resultado = $conn->query($sql);
                     while ($row = $resultado->fetch_assoc()) {
                         echo "<tr>";
                         echo "<td>{$row['nome']}</td>";
@@ -67,7 +70,6 @@ include("../database/db.php");
                         echo "<td>{$row['celular']}</td>";
                         echo "<td>{$row['email']}</td>";
                         echo "<td>{$row['status']}</td>";
-                        echo "<td><button onclick=\"realizarAcao({$row['id']})\">Realizar Ação</button></td>";
                         echo "</tr>";
                     }
                 ?>
