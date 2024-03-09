@@ -88,16 +88,3 @@ main {
     background-color: transparent;
     cursor: pointer;
 }
-
-.estilo-tabela {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 20px;
-    border: 1px solid #000000;
-    padding: 8px;
-    text-align: left;
-}
-
-.estilo-tabela button {
-    display: none;
-}
