@@ -24,6 +24,9 @@ if (!empty($_GET['idclientes'])) {
         header("Location: ../pages/clientes.php");
     }
 }
+else {
+    header("Location: ../pages/clientes.php");
+}
 
 
 ?>
@@ -73,7 +76,7 @@ if (!empty($_GET['idclientes'])) {
                     </div>
 
                     <div class="form_cad">
-                        <form action="/database/processar_cadastro_cliente.php" method="post">
+                        <form action="/database/cliente_edit.php" method="post">
                             <div class="row">
                                 <div class="col">
                                     <label for="nome">Nome completo</label>
@@ -129,8 +132,8 @@ if (!empty($_GET['idclientes'])) {
                                     </select>
                                 </div>
                             </div>
-
-                            <input type="submit" value="Salvar">
+                            <input type="hidden" name="idclientes" value="<?php echo $idclientes ?>"> 
+                            <input type="submit" name="update" id="update" value="Salvar">
                         </form>
                     </div>
                 </div>
