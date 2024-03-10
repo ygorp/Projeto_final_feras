@@ -95,3 +95,73 @@ main {
     background-color: transparent;
     cursor: pointer;
 }
+
+.pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pesquisa input {
+    width: 250px;
+    height: 30px;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    padding: 0 1rem;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.pesquisa a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.fa-search {
+    background-color: #FEAA29;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 18px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    border-radius: 10px 0 0 0;
+}
+.left {
+    border-radius: 0 10px 0 0;
+}
+
+.titulo_cad {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 10px 10px 0 0;
+    padding-left: 10px;
+}
+
+.titulo_cad h1 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.btn_cad {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.btn {
+    width: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    margin-top: 2rem;
+    background-color: #FEAA29;
+}

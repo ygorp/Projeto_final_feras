@@ -50,6 +50,10 @@ $result = $conn->query($sql);
         <div class="cliente_list">
             <div class="titulo_btn">
                 <h1>Clientes</h1>
+                <div class="pesquisa">
+                <input type="search" class="form-control" name="pesquisa" id="pesquisa" placeholder="Pesquisar">
+                <a href=""><i class="fa-solid fa-search"></i></a>
+                </div>
                 <a href="/pages/cad_clientes.php"><i class="fa-solid fa-square-plus"></i></a>
             </div>
 
@@ -57,13 +61,13 @@ $result = $conn->query($sql);
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nome Completo</th>
-                            <th scope="col">CPF</th>
-                            <th scope="col">Celular</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Ações</th>
+                            <th scope="col" class="bg-black text-white right">#</th>
+                            <th scope="col" class="bg-black text-white">Nome Completo</th>
+                            <th scope="col" class="bg-black text-white">CPF</th>
+                            <th scope="col" class="bg-black text-white">Celular</th>
+                            <th scope="col" class="bg-black text-white">Email</th>
+                            <th scope="col" class="bg-black text-white">Status</th>
+                            <th scope="col" class="bg-black text-white left">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -79,7 +83,7 @@ $result = $conn->query($sql);
                                 echo "<td>".$user_data['status']."</td>";
                                 echo "<td>
                                 <a href='../database/edit_clientes.php?idclientes=$user_data[idclientes]'><i class='fa-solid fa-pencil'></i></a>
-                                <a href='delete_clientes.php?idclientes=$user_data[idclientes]'><i class='fa-solid fa-trash'></i></a>
+                                <a href='../database/delete_clientes.php?idclientes=$user_data[idclientes]'><i class='fa-solid fa-trash' style='color: red;'></i></a>
                                 </td>";
                             }
                         ?>

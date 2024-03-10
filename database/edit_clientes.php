@@ -133,7 +133,9 @@ else {
                                 </div>
                             </div>
                             <input type="hidden" name="idclientes" value="<?php echo $idclientes ?>"> 
-                            <input type="submit" name="update" id="update" value="Salvar">
+                            <div class="btn_cad">
+                                <input type="submit" class="btn" name="update" id="update" value="Salvar">
+                            </div>
                         </form>
                     </div>
                 </div>

@@ -101,7 +101,9 @@ if (!isset($_SESSION['usuario_email'])) {
                                 </div>
                             </div>
 
-                            <input type="submit" value="Salvar">
+                            <div class="btn_cad">
+                                <input type="submit" value="Salvar" class="btn">
+                            </div>
                         </form>
                     </div>
                 </div>
