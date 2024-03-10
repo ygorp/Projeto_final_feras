@@ -77,45 +77,55 @@ if (!empty($_GET['idclientes'])) {
                             <div class="row">
                                 <div class="col">
                                     <label for="nome">Nome completo</label>
-                                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Ygor Pacheco" aria-label="First name">
+                                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Ygor Pacheco" aria-label="First name" value="<?php echo $nome ?>">
                                 </div>
                                 <div class="col">
                                     <label for="nascimento">Data de nascimento</label>
-                                    <input type="text" id="nascimento" name="nascimento" class="form-control" placeholder="07/02/1992" aria-label="Last name">
+                                    <input type="text" id="nascimento" name="nascimento" class="form-control" placeholder="07/02/1992" aria-label="Last name" value="<?php echo $nascimento ?>">
                                 </div>
                                 <div class="col">
                                     <label for="genero" class="form-label">Gênero</label>
-                                    <select id="genero" name="genero" class="form-select">
-                                    <option selected>Selecione</option>
-                                    <option value="feminino">Feminino</option>
-                                    <option value="masculino">Masculino</option>
+                                    <select id="genero" name="genero" class="form-select" value="<?php echo $genero ?>">
+                                    <?php
+                                    $opcoesGenero = array("Masculino", "Feminino");
+
+                                    foreach ($opcoesGenero as $opcao) {
+                                        $selected = $genero == $opcao ? 'selected' : '';
+                                        echo "<option value='$opcao' $selected>$opcao</option>";
+                                    }
+                                    ?>
                                     </select>
                                 </div>
                                 <div class="col">
                                     <label for="cpf">CPF</label>
-                                    <input type="text" id="cpf" name="cpf" class="form-control" placeholder="133.018.543-45" aria-label="Last name">
+                                    <input type="text" id="cpf" name="cpf" class="form-control" placeholder="133.018.543-45" aria-label="Last name" value="<?php echo $cpf ?>">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col">
                                     <label for="celular">Celular</label>
-                                    <input type="text" id="celular" name="celular" class="form-control" placeholder="(27) 9 9999-889" aria-label="First name">
+                                    <input type="text" id="celular" name="celular" class="form-control" placeholder="(27) 9 9999-889" aria-label="First name" value="<?php echo $celular ?>">
                                 </div>
                                 <div class="col">
                                     <label for="email">E-mail</label>
-                                    <input type="text" id="email" name="email" class="form-control" placeholder="ygor@email.com.br" aria-label="Last name">
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="ygor@email.com.br" aria-label="Last name" value="<?php echo $email ?>">
                                 </div>
                                 <div class="col">
                                     <label for="senha">Senha</label>
-                                    <input type="password" id="senha" name="senha" class="form-control" placeholder="************" aria-label="Last name">
+                                    <input type="password" id="senha" name="senha" class="form-control" placeholder="************" aria-label="Last name" value="<?php echo $senha ?>">
                                 </div>
                                 <div class="col">
-                                <label for="status" class="form-label">Status</label>
+                                    <label for="status" class="form-label">Status</label>
                                     <select id="status" name="status" class="form-select">
-                                    <option selected>Selecione</option>
-                                    <option value="ativo">Ativo</option>
-                                    <option value="inativo">Inativo</option>
+                                    <?php 
+                                    
+                                    $opcoesStatus = array("Ativo", "Inativo");
+                                    foreach ($opcoesStatus as $opcao) {
+                                         $selected = $status == $opcao ? 'selected' : '';
+                                         echo "<option value='$opcao' $selected>$opcao</option>";
+                                     }
+                                    ?>
                                     </select>
                                 </div>
                             </div>
