@@ -47,6 +47,13 @@ main {
     height: 100vh;
 }
 
+.fa-square-plus,
+.fa-circle-chevron-left {
+    font-size: 35px;
+    color: #FEAA29;
+    cursor: pointer;
+}
+
 .secao {
     width: 21%;
     height: 100vh;

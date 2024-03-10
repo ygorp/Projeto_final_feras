@@ -77,7 +77,10 @@ $result = $conn->query($sql);
                                 echo "<td>".$user_data['celular']."</td>";
                                 echo "<td>".$user_data['email']."</td>";
                                 echo "<td>".$user_data['status']."</td>";
-                                echo "</tr>";
+                                echo "<td>
+                                <a href='../database/edit_clientes.php?idclientes=$user_data[idclientes]'><i class='fa-solid fa-pencil'></i></a>
+                                <a href='delete_clientes.php?idclientes=$user_data[idclientes]'><i class='fa-solid fa-trash'></i></a>
+                                </td>";
                             }
                         ?>
                     </tbody>
